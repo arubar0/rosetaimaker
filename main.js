@@ -95,6 +95,7 @@ const body = [
 	[{ src: `${dirBody}/body_yellow.png`, layer: 4, category: 'body' }]
 	];
 
+
 const eyes = [
 	[{ src: `${dirEyes}/eyes_basic.png`, layer: 9, category: 'eyes' }],
 	[{ src: `${dirEyes}/eyes_3rd eye.png`, layer: 9, category: 'eyes' }],
