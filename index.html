@@ -1,0 +1,200 @@
+<html>
+<head>
+	<style>
+		#app {
+			position:relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		#categories{
+			width: 100%;
+			border: 1px solid blue;
+			display: flex;
+			flex-direction: row;
+		}
+
+		#categories>.sub-header{
+			border: 1px solid red;
+			flex: 1;
+			list-style: none;
+			text-align: center;
+		}
+
+
+		.sub{
+			border: 1px solid green;
+			display: block;
+		}
+
+		.sub>span{
+			display:block;
+			border: 1px solid rgba(75, 255, 75, .5);
+		}
+
+		input[type=radio]{
+			display: none;
+		}
+
+		label{
+			display: block;
+		}
+
+
+
+		
+
+	</style>
+</head>
+<body>
+	<canvas id="app" width="500" height="667" style="border:1px solid black;"></canvas>	
+	<div id="categories">
+
+		<div class="sub-header">
+			<label>
+				<input type="radio" name="category" />head
+
+				<div id="head" class="sub">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+		<div class="sub-header">
+			<label>
+				<input type="radio" name="category" />visor
+
+				<div id="visor" class="sub">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+		<div class="sub-header">
+			<label>
+				<input type="radio" name="category" />eyes
+
+				<div id="eyes" class="sub">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+		<div class="sub-header">
+			<label>
+				<input type="radio" name="category" />tie
+
+				<div id="tie" class="sub">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+		<div class="sub-header">
+			<label>
+				<input type="radio" name="category" />body
+
+				<div id="body" class="sub">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+		<div class="sub-header">
+			<label>
+				<input type="radio" name="category" />hands
+
+				<div id="hands" class="sub">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+		<div class="sub-header">
+			<label>
+				<input type="radio" name="category" />legs
+
+				<div id="legs" class="sub">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</label>
+		</div>
+
+
+	</div>
+	<div></div>
+</body>
+<script src="./main.js"></script> 
+</html> 
