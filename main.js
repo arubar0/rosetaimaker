@@ -296,7 +296,16 @@ function drawRosetai(index, isDownload) {
 	}
 
 	if (index >= currentRosetai.length) {
-		if(!isDownload){
+		if(isDownload){
+			const data = downloadCanvas.toDataURL();
+			const link = document.createElement('a');
+			link.href = data;
+			link.download = "rosetai_"+Date.now();
+
+			link.click();
+			link.remove();
+			
+		}else{
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			ctx.drawImage(bufferCanvas, 0, 0);
 		}
@@ -382,11 +391,4 @@ function showCategory(value){
 
 function downloadRosetai(){
 	drawRosetai(0, true);
-	const data = downloadCanvas.toDataURL();
-    const link = document.createElement('a');
-    link.href = data;
-    link.download = "rosetai_"+Date.now();
-
-    link.click();
-    link.remove();
 }
