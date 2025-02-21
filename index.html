@@ -21,9 +21,9 @@
 		.category-label{
 			flex:1;
 			display: flex;           
-  			justify-content: center; 
-  			align-items: center;     
-  			border: 1px solid black;
+			justify-content: center; 
+			align-items: center;     
+			border: 1px solid black;
 
 		}
 
@@ -65,16 +65,16 @@
 </head>
 <body>
 
-<div id="column-categories">
- <input id="body" type="radio" name="category" value="body" class="category-input" onclick="showCategory(this.value)" selected /><label for="body" class="category-label">body</label>
- <input id="eyes" type="radio" name="category" value="eyes" class="category-input" onclick="showCategory(this.value)" /><label for="eyes" class="category-label">eyes</label>
- <input id="hands" type="radio" name="category" value="hands" class="category-input" onclick="showCategory(this.value)" /><label for="hands" class="category-label">hands</label>
- <input id="head" type="radio" name="category" value="head" class="category-input" onclick="showCategory(this.value)" /><label for="head" class="category-label">head</label>
- <input id="legs" type="radio" name="category" value="legs" class="category-input" onclick="showCategory(this.value)" /><label for="legs" class="category-label">legs</label>
- <input id="tie" type="radio" name="category" value="tie" class="category-input" onclick="showCategory(this.value)" /><label for="tie" class="category-label">tie</label>
- <input id="visor" type="radio" name="category" value="visor" class="category-input" onclick="showCategory(this.value)" /><label for="visor" class="category-label">visor</label>
+	<div id="column-categories">
+		<input id="body" type="radio" name="category" value="body" class="category-input" onclick="showCategory(this.value)" selected /><label for="body" class="category-label">body</label>
+		<input id="eyes" type="radio" name="category" value="eyes" class="category-input" onclick="showCategory(this.value)" /><label for="eyes" class="category-label">eyes</label>
+		<input id="hands" type="radio" name="category" value="hands" class="category-input" onclick="showCategory(this.value)" /><label for="hands" class="category-label">hands</label>
+		<input id="head" type="radio" name="category" value="head" class="category-input" onclick="showCategory(this.value)" /><label for="head" class="category-label">head</label>
+		<input id="legs" type="radio" name="category" value="legs" class="category-input" onclick="showCategory(this.value)" /><label for="legs" class="category-label">legs</label>
+		<input id="tie" type="radio" name="category" value="tie" class="category-input" onclick="showCategory(this.value)" /><label for="tie" class="category-label">tie</label>
+		<input id="visor" type="radio" name="category" value="visor" class="category-input" onclick="showCategory(this.value)" /><label for="visor" class="category-label">visor</label>
 
-</div>
+	</div>
 	<div id="column-items">
 		<div id="items-body" class="items"></div>
 		<div id="items-eyes" class="items"></div>
@@ -86,6 +86,9 @@
 	</div>
 	<div id="column-canvas">
 		<canvas id="app" width="600" height="800" style="border:1px solid black;"></canvas>
+		<div style="margin-top:1em;text-align:center;">
+			<input type="button" value="Download" onclick="downloadRosetai();">
+		</div>
 	</div>
 </body>
 <script src="./main.js"></script> 

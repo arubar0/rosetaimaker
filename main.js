@@ -346,10 +346,6 @@ function getLayersByType(type) {
 }
 
 
-
-
-
-
 function showCategory(value){
 	let items = document.querySelectorAll(".items");
 
@@ -358,4 +354,14 @@ function showCategory(value){
      });
 
      document.querySelector("#items-"+value).style.display = 'block';
+}
+
+function downloadRosetai(){
+	const data = canvas.toDataURL();
+    const link = document.createElement('a');
+    link.href = data;
+    link.download = "rosetai_"+Date.now();
+
+    link.click();
+    link.remove();
 }
