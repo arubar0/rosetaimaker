@@ -82,7 +82,7 @@ const canvas = document.getElementById("app");
 const ctx = canvas.getContext("2d");
 
 const downloadCanvas = document.createElement("canvas");
-const downloadCtx = canvas.getContext("2d");
+const downloadCtx = downloadCanvas.getContext("2d");
 
 const bufferCanvas = document.createElement("canvas");
 const bufferCtx = bufferCanvas.getContext("2d");
