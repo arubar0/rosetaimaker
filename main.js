@@ -201,6 +201,7 @@ const currentRosetai = [
 
 
 (function init() {
+showCategory("body");
 loadPreviews("head");
 loadPreviews("visor");
 loadPreviews("tie");
@@ -214,12 +215,13 @@ bufferCanvas.height = canvas.height;
 
 drawRosetai(0);
 
+
 })();
 
 
 
 function loadPreviews(type) {
-	const container = document.getElementById(type);
+	const container = document.getElementById("items-"+type);
 
 	const assetArray = getAssetArray(type);
 
@@ -264,7 +266,7 @@ function loadPreviews(type) {
 
 		}
 
-		container.children[i].appendChild(canvasPrev);
+		container.appendChild(canvasPrev);
 
 	}
 }
@@ -341,4 +343,19 @@ function getLayersByType(type) {
 	default:
 		return [];
 	}
+}
+
+
+
+
+
+
+function showCategory(value){
+	let items = document.querySelectorAll(".items");
+
+	 items.forEach(function(el) {
+        el.style.display = 'none';
+     });
+
+     document.querySelector("#items-"+value).style.display = 'block';
 }

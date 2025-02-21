@@ -1,42 +1,60 @@
 <html>
 <head>
 	<style>
-		#app {
-			position:relative;
-			left: 50%;
-			transform: translateX(-50%);
-		}
-		#categories{
-			width: 100%;
-			border: 1px solid blue;
+		body{
 			display: flex;
 			flex-direction: row;
+			gap: 10px;
 		}
 
-		#categories>.sub-header{
-			border: 1px solid red;
+		body > div {
+			border: 1px solid black;
+		}
+
+
+		#column-categories {
+			flex:.5;
+			display:flex;
+			flex-direction: column;
+		}
+
+		.category-label{
+			flex:1;
+			display: flex;           
+  			justify-content: center; 
+  			align-items: center;     
+  			border: 1px solid black;
+
+		}
+
+		.category-input{
+			display:none;
+		}
+
+
+
+
+		#column-items {
 			flex: 1;
-			list-style: none;
-			text-align: center;
+			position:relative;
 		}
 
-
-		.sub{
-			border: 1px solid green;
-			display: block;
-		}
-
-		.sub>span{
+		.items{
 			display:block;
-			border: 1px solid rgba(75, 255, 75, .5);
+			position:absolute;
+			width:100%;
+			height:100%;
+			border: 1px solid red;
 		}
 
-		input[type=radio]{
-			display: none;
+
+		.items canvas{
+			border: 1px solid black;
 		}
 
-		label{
-			display: block;
+
+		#column-canvas {
+			min-width:500px;
 		}
 
 
@@ -46,155 +64,29 @@
 	</style>
 </head>
 <body>
-	<canvas id="app" width="500" height="667" style="border:1px solid black;"></canvas>	
-	<div id="categories">
 
-		<div class="sub-header">
-			<label>
-				<input type="radio" name="category" />head
+<div id="column-categories">
+ <input id="body" type="radio" name="category" value="body" class="category-input" onclick="showCategory(this.value)" selected /><label for="body" class="category-label">body</label>
+ <input id="eyes" type="radio" name="category" value="eyes" class="category-input" onclick="showCategory(this.value)" /><label for="eyes" class="category-label">eyes</label>
+ <input id="hands" type="radio" name="category" value="hands" class="category-input" onclick="showCategory(this.value)" /><label for="hands" class="category-label">hands</label>
+ <input id="head" type="radio" name="category" value="head" class="category-input" onclick="showCategory(this.value)" /><label for="head" class="category-label">head</label>
+ <input id="legs" type="radio" name="category" value="legs" class="category-input" onclick="showCategory(this.value)" /><label for="legs" class="category-label">legs</label>
+ <input id="tie" type="radio" name="category" value="tie" class="category-input" onclick="showCategory(this.value)" /><label for="tie" class="category-label">tie</label>
+ <input id="visor" type="radio" name="category" value="visor" class="category-input" onclick="showCategory(this.value)" /><label for="visor" class="category-label">visor</label>
 
-				<div id="head" class="sub">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</div>
-
-		<div class="sub-header">
-			<label>
-				<input type="radio" name="category" />visor
-
-				<div id="visor" class="sub">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</div>
-
-		<div class="sub-header">
-			<label>
-				<input type="radio" name="category" />eyes
-
-				<div id="eyes" class="sub">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</div>
-
-		<div class="sub-header">
-			<label>
-				<input type="radio" name="category" />tie
-
-				<div id="tie" class="sub">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</div>
-
-		<div class="sub-header">
-			<label>
-				<input type="radio" name="category" />body
-
-				<div id="body" class="sub">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</div>
-
-		<div class="sub-header">
-			<label>
-				<input type="radio" name="category" />hands
-
-				<div id="hands" class="sub">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</div>
-
-		<div class="sub-header">
-			<label>
-				<input type="radio" name="category" />legs
-
-				<div id="legs" class="sub">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</label>
-		</div>
-
-
+</div>
+	<div id="column-items">
+		<div id="items-body" class="items"></div>
+		<div id="items-eyes" class="items"></div>
+		<div id="items-hands" class="items"></div>
+		<div id="items-head" class="items"></div>
+		<div id="items-legs" class="items"></div>
+		<div id="items-tie" class="items"></div>
+		<div id="items-visor" class="items"></div>
 	</div>
-	<div></div>
+	<div id="column-canvas">
+		<canvas id="app" width="600" height="800" style="border:1px solid black;"></canvas>
+	</div>
 </body>
 <script src="./main.js"></script> 
 </html> 
