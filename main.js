@@ -61,9 +61,14 @@ NEW ARRANGE
 
 */
 
-
+const webWidth = 600;
+const webHeight = 800;
+const originalWidth = 1200;
+const originalHeight = 1600;
 const prevWidth = 100;
 const prevHeight = prevWidth * 1.33;
+
+
 
 const dirBody = "./body";
 const dirEyes = "./eyes";
@@ -75,6 +80,9 @@ const dirVisor = "./visor";
 
 const canvas = document.getElementById("app");
 const ctx = canvas.getContext("2d");
+
+const downloadCanvas = document.createElement("canvas");
+const downloadCtx = canvas.getContext("2d");
 
 const bufferCanvas = document.createElement("canvas");
 const bufferCtx = bufferCanvas.getContext("2d");
@@ -213,6 +221,9 @@ loadPreviews("legs");
 bufferCanvas.width = canvas.width;
 bufferCanvas.height = canvas.height;
 
+downloadCanvas.width = originalWidth;
+downloadCanvas.height = originalHeight;
+
 drawRosetai(0);
 
 
@@ -274,14 +285,22 @@ function loadPreviews(type) {
 
 
 
-function drawRosetai(index) {
+function drawRosetai(index, isDownload) {
+
 	if (index === 0) {
-		bufferCtx.clearRect(0, 0, bufferCanvas.width, bufferCanvas.height);
+		if(isDownload){
+			downloadCtx.clearRect(0, 0, downloadCanvas.width, downloadCanvas.height);
+		}else{
+			bufferCtx.clearRect(0, 0, bufferCanvas.width, bufferCanvas.height);
+		}
 	}
 
 	if (index >= currentRosetai.length) {
-		ctx.clearRect(0, 0, canvas.width, canvas.height);
-		ctx.drawImage(bufferCanvas, 0, 0);
+		if(!isDownload){
+			ctx.clearRect(0, 0, canvas.width, canvas.height);
+			ctx.drawImage(bufferCanvas, 0, 0);
+		}
+
 		return;
 	}
 
@@ -291,13 +310,18 @@ function drawRosetai(index) {
 		img.src = currentItem.src;
 
 		img.onload = function () {
-			bufferCtx.drawImage(img, 0, 0, bufferCanvas.width, bufferCanvas.height);
-			drawRosetai(index + 1);
+			if(isDownload){
+				downloadCtx.drawImage(img, 0, 0, downloadCanvas.width, downloadCanvas.height);
+			}else{
+				bufferCtx.drawImage(img, 0, 0, bufferCanvas.width, bufferCanvas.height);
+			}
+
+			drawRosetai(index + 1, isDownload);
 		};
 
 
 	} else {
-		drawRosetai(index + 1);
+		drawRosetai(index + 1, isDownload);
 	}
 }
 
@@ -357,7 +381,8 @@ function showCategory(value){
 }
 
 function downloadRosetai(){
-	const data = canvas.toDataURL();
+	drawRosetai(0, true);
+	const data = downloadCanvas.toDataURL();
     const link = document.createElement('a');
     link.href = data;
     link.download = "rosetai_"+Date.now();
