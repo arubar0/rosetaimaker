@@ -1,6 +1,12 @@
 <html>
 <head>
 	<style>
+		html {
+			background: url('./ui/background.png') center center no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+		}
+
 		body{
 			display: flex;
 			flex-direction: row;
@@ -31,9 +37,6 @@
 			display:none;
 		}
 
-
-
-
 		#column-items {
 			flex: 1;
 			position:relative;
@@ -57,7 +60,16 @@
 			min-width:500px;
 		}
 
-
+		.canvas-background{
+			width:600;
+			height:800;
+			background-image: url('./ui/main_frame.png');
+			background-size: 600px 800px;
+  			background-position: center;
+  			background-repeat: no-repeat;
+			position:absolute;
+			z-index:-1;
+		}
 
 		
 
@@ -85,6 +97,7 @@
 		<div id="items-visor" class="items"></div>
 	</div>
 	<div id="column-canvas">
+		<div class="canvas-background"></div>
 		<canvas id="app" width="600" height="800" style="border:1px solid black;"></canvas>
 		<div style="margin-top:1em;text-align:center;">
 			<input type="button" value="Download" onclick="downloadRosetai();">

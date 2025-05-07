@@ -100,8 +100,10 @@ const body = [
 	[{ src: `${dirBody}/body_pink.png`, layer: 4, category: 'body' }],
 	[{ src: `${dirBody}/body_purple.png`, layer: 4, category: 'body' }],
 	[{ src: `${dirBody}/body_real.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_yellow.png`, layer: 4, category: 'body' }]
-	];
+	[{ src: `${dirBody}/body_square.png`, layer: 4, category: 'body' }],
+	[{ src: `${dirBody}/body_yellow.png`, layer: 4, category: 'body' }],
+	[{ src: `${dirBody}/body_8ball.png`, layer: 4, category: 'body' }]
+];
 
 
 const eyes = [
@@ -130,54 +132,58 @@ const hands = [
 	[{ src: `${dirHands}/hands_cornpopper.png`, layer: 10, category: 'hands' }],
 	[{ src: `${dirHands}/hands_penlights.png`, layer: 10, category: 'hands' }],
 	[{ src: `${dirHands}/hands_pickaxe.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_SnS.png`, layer: 10, category: 'hands' }]
-	];
+	[{ src: `${dirHands}/hands_SnS.png`, layer: 10, category: 'hands' }],
+	[{ src: `${dirHands}/hands_mic.png`, layer: 10, category: 'hands' }],
+	[{ src: `${dirHands}/hands_splatoongun.png`, layer: 10, category: 'hands' }],
+];
 
 const head = [
-	[{ src: `${dirHead}/head_basic.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_basic_b.png`, layer: 3, category: 'head' }],
+	[{ src: `${dirHead}/head_basic.png`, layer: 3, category: 'head' }],
 	[{ src: `${dirHead}/head_pata_rough.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_long_hair_front.png`, layer: 5, category: 'head' }, { src: `${dirHead}/head_long_hair_back.png`, layer: 3, category: 'head' }],	
 	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 5, category: 'head' }],
 	[{ src: `${dirHead}/head_diamond helmet.png`, layer: 5, category: 'head' }],
 	[{ src: `${dirHead}/head_headphone.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_indian headdress_b.png`, layer: 3, category: 'head' }],
-	[{ src: `${dirHead}/head_pata_rough.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_pineapple_b.png`, layer: 3, category: 'head' }],
+	[{ src: `${dirHead}/head_indian headdress.png`, layer: 3, category: 'head' }],
+	[{ src: `${dirHead}/head_pineapple.png`, layer: 3, category: 'head' }],
 	[{ src: `${dirHead}/head_rose.png`, layer: 5, category: 'head' }],
 	[{ src: `${dirHead}/head_straw hat.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_worm.png`, layer: 5, category: 'head' }]
-	];
+	[{ src: `${dirHead}/head_worm.png`, layer: 5, category: 'head' }],
+	[{ src: `${dirHead}/head_choco horns.png`, layer: 3, category: 'head' }],
+	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 5, category: 'head' }],
+	[{ src: `${dirHead}/head_cat ears.png`, layer: 5, category: 'head' }],
+	[{ src: `${dirHead}/head_pain.png`, layer: 5, category: 'head' }],
+	[{ src: `${dirHead}/head_peko ears.png`, layer: 5, category: 'head' }],	
+	[{ src: `${dirHead}/head_tanukileaf.png`, layer: 5, category: 'head' }]
+];
 
 const legs = [
 	[{ src: `${dirLegs}/legs_basic.png`, layer: 2, category: 'legs' }],
 	[{ src: `${dirLegs}/legs_Aki boots.png`, layer: 2, category: 'legs' }],
 	[{ src: `${dirLegs}/legs_broccoli - sakamot o.png`, layer: 2, category: 'legs' }],
 	[{ src: `${dirLegs}/legs_human.png`, layer: 2, category: 'legs' }],
-	[{ src: `${dirLegs}/legs_tako.png`, layer: 2, category: 'legs' }]
-	];
+	[{ src: `${dirLegs}/legs_tako.png`, layer: 2, category: 'legs' }],
+	[{ src: `${dirLegs}/legs_chicken.png`, layer: 2, category: 'legs' }],
+	[{ src: `${dirLegs}/legs_tree trunk.png`, layer: 2, category: 'legs' }]
+];
 
 const tie = [
 	[{ src: `${dirTie}/tie_basic.png`, layer: 8, category: 'tie' }],
 	[{ src: `${dirTie}/tie_beard black.png`, layer: 8, category: 'tie' }],
 	[{ src: `${dirTie}/tie_beard blonde.png`, layer: 8, category: 'tie' }],
 	[{ src: `${dirTie}/tie_beard white.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_broccoli - sakamot o.png`, layer: 8, category: 'tie' }],
 	[{ src: `${dirTie}/tie_moustache black.png`, layer: 8, category: 'tie' }],
 	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 8, category: 'tie' }],
 	[{ src: `${dirTie}/tie_moustache white.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_mustache - oshu.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_neopolice M.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_neopolice _F.png`, layer: 8, category: 'tie' }],
+	[{ src: `${dirTie}/tie_neopolice M.png`, layer: 6, category: 'tie' }],
+	[{ src: `${dirTie}/tie_neopolice F.png`, layer: 6, category: 'tie' }],
 	[{ src: `${dirTie}/tie_peanut.png`, layer: 8, category: 'tie' }],
 	[{ src: `${dirTie}/tie_straight.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_UFO_b.png`, layer: 6, category: 'tie' }]
+	[{ src: `${dirTie}/tie_UFO.png`, layer: 6, category: 'tie' }]
 	];
 
 const visor = [
 	[{ src: `${dirVisor}/visor_basic.png`, layer: 7, category: 'visor' }],
 	[{ src: `${dirVisor}/visor_biker.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_broccoli - sakamot o.png`, layer: 7, category: 'visor' }],
 	[{ src: `${dirVisor}/visor_crusader.png`, layer: 7, category: 'visor' }],
 	[{ src: `${dirVisor}/visor_crusader2.png`, layer: 7, category: 'visor' }],
 	[{ src: `${dirVisor}/visor_cyclops.png`, layer: 7, category: 'visor' }],
@@ -186,7 +192,9 @@ const visor = [
 	[{ src: `${dirVisor}/visor_paper.png`, layer: 7, category: 'visor' }],
 	[{ src: `${dirVisor}/visor_round.png`, layer: 7, category: 'visor' }],
 	[{ src: `${dirVisor}/visor_round2.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 7, category: 'visor' }]
+	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 7, category: 'visor' }],
+	[{ src: `${dirVisor}/visor_panda_Ticket.png`, layer: 7, category: 'visor' }],
+	[{ src: `${dirVisor}/visor_sunglasses.png`, layer: 7, category: 'visor' }],
 	];
 
 
