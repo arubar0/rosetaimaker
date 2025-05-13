@@ -199,7 +199,7 @@ const tie = [
 	[{ src: `${dirTie}/tie_moustache black.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 6 }],
 	[{ src: `${dirTie}/tie_moustache white.png`, layer: 6 }],
-	[{ src: `${dirTie}/tie_mustache - oshu.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_mustache_oshu.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_neopolice F_b.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_neopolice M_b.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_peanut.png`, layer: 8 }],
@@ -451,7 +451,7 @@ function getLayersByType(type) {
 
 function showCategory(input) {
 	let items = document.querySelectorAll(".items");
-	console.log("show-category");
+
 	let category;
 	if (typeof input === 'string') {
 		category = input;
@@ -465,7 +465,7 @@ function showCategory(input) {
 
 	const unselectButtons = document.querySelectorAll('.btn-category');
 	const selectButton = document.querySelector(`#${category}`);
-	console.log(selectButton);
+
 	unselectButtons.forEach(btn => {
 		btn.classList.remove('active');
 	});
