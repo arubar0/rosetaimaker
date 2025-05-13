@@ -1,28 +1,27 @@
-console.log("--DEBUG--");
 
 /*
 Hands (front) 
-    Normal hands, should be able to cover any other item
+	Normal hands, should be able to cover any other item
 Tie (front)
-    Normal tie
+	Normal tie
 Head (front)
-    Hats, hair...
+	Hats, hair...
 Eyes
-    Covering the visor
+	Covering the visor
 Visor
-    Visor, glasses
+	Visor, glasses
 Legs (front)
-    Normal legs
+	Normal legs
 Body
-    Normal body
+	Normal body
 Hands (back)
-    Arms crossed on the back or something
+	Arms crossed on the back or something
 Tie (back)
-    maybe a scarf with wind partially behind the body
+	maybe a scarf with wind partially behind the body
 Legs (back)
-    Maybe when running, it would be the farthest item
+	Maybe when running, it would be the farthest item
 Head (back)
-    long hair, etc
+	long hair, etc
 
 
 If we need to change the layer of a part: 
@@ -37,27 +36,27 @@ If we need to change the layer of a part:
 NEW ARRANGE
 ------------
 10 	Hands (front) 
-     Normal hands, should be able to cover any other item
+	 Normal hands, should be able to cover any other item
 9 	Eyes
-     Covering the visor
+	 Covering the visor
 8	Tie (front)
-     Normal tie
+	 Normal tie
 7	Visor
-     Visor, glasses
+	 Visor, glasses
 6 	Tie (back)
-     maybe a scarf with wind partially behind the body
+	 maybe a scarf with wind partially behind the body
 5	Head (front)
-     Hats, hair...
+	 Hats, hair...
 4 	Body
-     Normal body
+	 Normal body
 3 	Head (back)
-     long hair, etc
+	 long hair, etc
 2 	Legs (front)
-     Normal legs
+	 Normal legs
 1 	Hands (back)
-     Arms crossed on the back or something
+	 Arms crossed on the back or something
 0 	Legs (back)
-     Maybe when running, it would be the farthest item
+	 Maybe when running, it would be the farthest item
 
 */
 
@@ -69,7 +68,7 @@ const prevWidth = 100;
 const prevHeight = prevWidth * 1.33;
 
 
-
+const dirCommon = "./common";
 const dirBody = "./body";
 const dirEyes = "./eyes";
 const dirHands = "./hands";
@@ -88,114 +87,144 @@ const bufferCanvas = document.createElement("canvas");
 const bufferCtx = bufferCanvas.getContext("2d");
 
 const body = [
-	[{ src: `${dirBody}/body_basic.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_beer bottle.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_blue.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_broccoli - sakamot o.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_cyan.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_green.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_lime.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_orange.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_pineapple.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_pink.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_purple.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_real.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_square.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_yellow.png`, layer: 4, category: 'body' }],
-	[{ src: `${dirBody}/body_8ball.png`, layer: 4, category: 'body' }]
+	[{ src: `${dirBody}/body_basic.png`, layer: 4 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_beer bottle.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_blue.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_broccoli - sakamot o.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_cyan.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_green.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_lime.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_orange.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_pineapple.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_pink.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_purple.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_real.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_square.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_yellow.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_8ball.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_redshortapple - Sofea Osmera.png`, layer: 4 }],
+	[{ src: `${dirBody}/body_pumpkin.png`, layer: 4 }],
 ];
 
 
 const eyes = [
-	[{ src: `${dirEyes}/eyes_basic.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_3rd eye.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_angry.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_closed.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_creeper.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_dead.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_horus.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_oh no.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_real.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_round.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_swirly glasses.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_weird.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_white.png`, layer: 9, category: 'eyes' }],
-	[{ src: `${dirEyes}/eyes_XD.png`, layer: 9, category: 'eyes' }]
-	];
-
-const hands = [
-	[{ src: `${dirHands}/hands_basic.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_beer.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_broccoli - sakamot o.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_buff.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_club.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_cornpopper.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_penlights.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_pickaxe.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_SnS.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_mic.png`, layer: 10, category: 'hands' }],
-	[{ src: `${dirHands}/hands_splatoongun.png`, layer: 10, category: 'hands' }],
+	[{ src: `${dirEyes}/eyes_basic.png`, layer: 9 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_3rd eye.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_angry.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_closed.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_creeper.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_dead.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_haaton.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_halfeye - Sofea Osmera.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_horus.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_jealous penguin.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_jobzu.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_monocle.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_oh no.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_pumpkin.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_real.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_round.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_swirly glasses.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_weird.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_white.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_XD.png`, layer: 9 }],
 ];
 
+const hands = [
+	[{ src: `${dirHands}/hands_basic.png`, layer: 10 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_beer.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_broccoli - sakamot o.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_buff.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_club.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_cornpopper.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_jobzu.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_mic.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_penlights.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_pickaxe.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_simple whiteglove - Sofea Osmera.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_SnS.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_splatoongun.png`, layer: 10 }],
+];
+// b = 3
 const head = [
-	[{ src: `${dirHead}/head_basic.png`, layer: 3, category: 'head' }],
-	[{ src: `${dirHead}/head_pata_rough.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_diamond helmet.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_headphone.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_indian headdress.png`, layer: 3, category: 'head' }],
-	[{ src: `${dirHead}/head_pineapple.png`, layer: 3, category: 'head' }],
-	[{ src: `${dirHead}/head_rose.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_straw hat.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_worm.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_choco horns.png`, layer: 3, category: 'head' }],
-	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_cat ears.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_pain.png`, layer: 5, category: 'head' }],
-	[{ src: `${dirHead}/head_peko ears.png`, layer: 5, category: 'head' }],	
-	[{ src: `${dirHead}/head_tanukileaf.png`, layer: 5, category: 'head' }]
+	[{ src: `${dirHead}/head_basic.png`, layer: 3 }],
+	[{ src: `${dirCommon}/empty`, layer: 5 }],
+	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_cat ears.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_choco horns_b.png`, layer: 3 }],
+	[{ src: `${dirHead}/head_diamond helmet.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_ebifrion mane_b.png`, layer: 3 }],
+	[{ src: `${dirHead}/head_flowery - Sofea Osmera.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_fubuki ears.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_headphone.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_indian headdress_b.png`, layer: 3 }],
+	[{ src: `${dirHead}/head_kapumin bow.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_pain.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_pata_rough.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_peko ears.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_pineapple_b.png`, layer: 3 }],
+	[{ src: `${dirHead}/head_rose.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_rosenbhat.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_straw hat.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_tanukileaf.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_worm.png`, layer: 5 }],
 ];
 
 const legs = [
-	[{ src: `${dirLegs}/legs_basic.png`, layer: 2, category: 'legs' }],
-	[{ src: `${dirLegs}/legs_Aki boots.png`, layer: 2, category: 'legs' }],
-	[{ src: `${dirLegs}/legs_broccoli - sakamot o.png`, layer: 2, category: 'legs' }],
-	[{ src: `${dirLegs}/legs_human.png`, layer: 2, category: 'legs' }],
-	[{ src: `${dirLegs}/legs_tako.png`, layer: 2, category: 'legs' }],
-	[{ src: `${dirLegs}/legs_chicken.png`, layer: 2, category: 'legs' }],
-	[{ src: `${dirLegs}/legs_tree trunk.png`, layer: 2, category: 'legs' }]
+	[{ src: `${dirLegs}/legs_basic.png`, layer: 2 }],
+	[{ src: `${dirCommon}/empty`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_Aki boots.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_broccoli - sakamot o.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_chicken.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_closer - Sofea Osmera.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_human.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_sports shoes.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_tako.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_tree trunk.png`, layer: 2 }],
 ];
 
+// b = 6
 const tie = [
-	[{ src: `${dirTie}/tie_basic.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_beard black.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_beard blonde.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_beard white.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_moustache black.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_moustache white.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_neopolice M.png`, layer: 6, category: 'tie' }],
-	[{ src: `${dirTie}/tie_neopolice F.png`, layer: 6, category: 'tie' }],
-	[{ src: `${dirTie}/tie_peanut.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_straight.png`, layer: 8, category: 'tie' }],
-	[{ src: `${dirTie}/tie_UFO.png`, layer: 6, category: 'tie' }]
-	];
+	[{ src: `${dirTie}/tie_basic.png`, layer: 8 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_beard black.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_beard blonde.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_beard white.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_gamer coat_b.png`, layer: 6 }],
+	[{ src: `${dirTie}/tie_jobzu.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_moustache black.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 6 }],
+	[{ src: `${dirTie}/tie_moustache white.png`, layer: 6 }],
+	[{ src: `${dirTie}/tie_mustache - oshu.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_neopolice F_b.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_neopolice M_b.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_peanut.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_pinkribbon - Sofea Osmera.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_straight.png`, layer: 8 }],
+	[{ src: `${dirTie}/tie_UFO_b.png`, layer: 6 }],
+];
 
 const visor = [
-	[{ src: `${dirVisor}/visor_basic.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_biker.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_crusader.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_crusader2.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_cyclops.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_kamina.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_noh mask.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_paper.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_round.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_round2.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_panda_Ticket.png`, layer: 7, category: 'visor' }],
-	[{ src: `${dirVisor}/visor_sunglasses.png`, layer: 7, category: 'visor' }],
-	];
+	[{ src: `${dirVisor}/visor_basic.png`, layer: 7 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_biker.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_crusader.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_crusader2.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_cyclops.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_feathery - Sofea Osmera.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_kamina.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_noh mask.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_panda_Ticket.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_paper.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_round.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_round2.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_sunglasses.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 7 }],
+];
 
 
 
@@ -213,34 +242,67 @@ const currentRosetai = [
 	eyes[0][0],		// 9
 	hands[0][0]		// 10
 	// Front
-	];
+];
 
 
 (function init() {
-showCategory("body");
-loadPreviews("head");
-loadPreviews("visor");
-loadPreviews("tie");
-loadPreviews("body");
-loadPreviews("eyes");
-loadPreviews("hands");
-loadPreviews("legs");
+	showCategory("body");
+	loadPreviews("head");
+	loadPreviews("visor");
+	loadPreviews("tie");
+	loadPreviews("body");
+	loadPreviews("eyes");
+	loadPreviews("hands");
+	loadPreviews("legs");
 
-bufferCanvas.width = canvas.width;
-bufferCanvas.height = canvas.height;
+	bufferCanvas.width = canvas.width;
+	bufferCanvas.height = canvas.height;
 
-downloadCanvas.width = originalWidth;
-downloadCanvas.height = originalHeight;
+	downloadCanvas.width = originalWidth;
+	downloadCanvas.height = originalHeight;
 
-drawRosetai(0);
+	drawRosetai(0);
 
+	window.addEventListener('DOMContentLoaded', () => {
+		document.querySelectorAll('.items canvas').forEach(canvas => {
+			let wrapper = document.createElement('div');
+			wrapper.className = 'canvas-wrapper';
+			canvas.parentNode.insertBefore(wrapper, canvas);
+			wrapper.appendChild(canvas);
+		});
+
+		document.querySelectorAll('.items').forEach(item => {
+			let canvasWrappers = item.querySelectorAll('.canvas-wrapper');
+
+			let second = canvasWrappers[1];
+			second.className = 'canvas-wrapper empty';
+		});
+	});
+
+	const container = document.querySelector('#categories');
+	const leftBtn = document.querySelector('#btn-left');
+	const rightBtn = document.querySelector('#btn-right');
+
+	leftBtn.addEventListener('click', () => {
+		container.scrollBy({
+			left: -70,
+			behavior: 'smooth'
+		});
+	});
+
+	rightBtn.addEventListener('click', () => {
+		container.scrollBy({
+			left: 70,
+			behavior: 'smooth'
+		});
+	});
 
 })();
 
 
 
 function loadPreviews(type) {
-	const container = document.getElementById("items-"+type);
+	const container = document.getElementById("items-" + type);
 
 	const assetArray = getAssetArray(type);
 
@@ -272,12 +334,12 @@ function loadPreviews(type) {
 
 		asset.sort((a, b) => a.layer - b.layer);
 
-		for(let partIndex = 0;partIndex < asset.length ; partIndex++){
+		for (let partIndex = 0; partIndex < asset.length; partIndex++) {
 			const img = new Image();
-			img.src = asset[partIndex].src; 
+			img.src = asset[partIndex].src;
 
-			img.width=prevWidth;
-			img.height=prevHeight;
+			img.width = prevWidth;
+			img.height = prevHeight;
 
 			img.onload = function () {
 				ctxPrev.drawImage(img, 0, 0, canvasPrev.width, canvasPrev.height);
@@ -296,24 +358,24 @@ function loadPreviews(type) {
 function drawRosetai(index, isDownload) {
 
 	if (index === 0) {
-		if(isDownload){
+		if (isDownload) {
 			downloadCtx.clearRect(0, 0, downloadCanvas.width, downloadCanvas.height);
-		}else{
+		} else {
 			bufferCtx.clearRect(0, 0, bufferCanvas.width, bufferCanvas.height);
 		}
 	}
 
 	if (index >= currentRosetai.length) {
-		if(isDownload){
+		if (isDownload) {
 			const data = downloadCanvas.toDataURL();
 			const link = document.createElement('a');
 			link.href = data;
-			link.download = "rosetai_"+Date.now();
+			link.download = "rosetai_" + Date.now();
 
 			link.click();
 			link.remove();
-			
-		}else{
+
+		} else {
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			ctx.drawImage(bufferCanvas, 0, 0);
 		}
@@ -327,9 +389,9 @@ function drawRosetai(index, isDownload) {
 		img.src = currentItem.src;
 
 		img.onload = function () {
-			if(isDownload){
+			if (isDownload) {
 				downloadCtx.drawImage(img, 0, 0, downloadCanvas.width, downloadCanvas.height);
-			}else{
+			} else {
 				bufferCtx.drawImage(img, 0, 0, bufferCanvas.width, bufferCanvas.height);
 			}
 
@@ -346,57 +408,103 @@ function drawRosetai(index, isDownload) {
 
 function getAssetArray(type) {
 	switch (type) {
-	case "head":
-		return head;
-	case "visor":
-		return visor;
-	case "eyes":
-		return eyes;
-	case "tie":
-		return tie;
-	case "body":
-		return body;
-	case "hands":
-		return hands;
-	case "legs":
-		return legs;
-	default:
-		return [];
+		case "head":
+			return head;
+		case "visor":
+			return visor;
+		case "eyes":
+			return eyes;
+		case "tie":
+			return tie;
+		case "body":
+			return body;
+		case "hands":
+			return hands;
+		case "legs":
+			return legs;
+		default:
+			return [];
 	}
 }
 
 function getLayersByType(type) {
 	switch (type) {
-	case "legs":
-		return [0, 2];
-	case "body":
-		return [4];
-	case "visor":
-		return [7];
-	case "eyes":
-		return [9];
-	case "tie":
-		return [6, 8];
-	case "hands":
-		return [1, 10];
-	case "head":
-		return [3, 5];
-	default:
-		return [];
+		case "legs":
+			return [0, 2];
+		case "body":
+			return [4];
+		case "visor":
+			return [7];
+		case "eyes":
+			return [9];
+		case "tie":
+			return [6, 8];
+		case "hands":
+			return [1, 10];
+		case "head":
+			return [3, 5];
+		default:
+			return [];
 	}
 }
 
 
-function showCategory(value){
+function showCategory(input) {
 	let items = document.querySelectorAll(".items");
+	console.log("show-category");
+	let category;
+	if (typeof input === 'string') {
+		category = input;
+	} else if (input?.currentTarget?.dataset?.category) {
+		category = input.currentTarget.dataset.category;
+	}
 
-	 items.forEach(function(el) {
-        el.style.display = 'none';
-     });
+	items.forEach(function (el) {
+		el.style.display = 'none';
+	});
 
-     document.querySelector("#items-"+value).style.display = 'block';
+	const unselectButtons = document.querySelectorAll('.btn-category');
+	const selectButton = document.querySelector(`#${category}`);
+	console.log(selectButton);
+	unselectButtons.forEach(btn => {
+		btn.classList.remove('active');
+	});
+
+	selectButton.classList.add('active');
+
+
+	document.querySelector("#items-" + category).style.display = 'grid';
 }
 
-function downloadRosetai(){
+function downloadRosetai() {
 	drawRosetai(0, true);
+}
+
+// Instead of checking which layer do I need to skip due to 
+// complements having different options, we simulate the click event of the previews so it will take care of the rest
+// We use the requestFrame because if not, even after cleaning the vanvas, it will show overlapped
+// duplicated accesories
+function randomRosetai() {
+	// Clean the buffer and canvas just in case
+	bufferCtx.clearRect(0, 0, bufferCanvas.width, bufferCanvas.height);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+	const categories = document.querySelectorAll('.items');
+	let i = 0;
+
+	function clickNext() {
+		if (i >= categories.length) return;
+
+		const accesories = categories[i].querySelectorAll('canvas');
+		if (accesories.length > 0) {
+			const randomAccesory = accesories[Math.floor(Math.random() * accesories.length)];
+			randomAccesory.click();
+		}
+
+		i++;
+		// Waiting for the next frame to be used to draw
+		requestAnimationFrame(clickNext);
+	}
+
+	clickNext();
 }
