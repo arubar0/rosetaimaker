@@ -151,7 +151,7 @@ const hands = [
 // b = 3
 const head = [
 	[{ src: `${dirHead}/head_basic.png`, layer: 3 }],
-	[{ src: `${dirCommon}/empty`, layer: 5 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 5 }],
 	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 5 }],
 	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 5 }],
 	[{ src: `${dirHead}/head_cat ears.png`, layer: 5 }],
@@ -176,7 +176,7 @@ const head = [
 
 const legs = [
 	[{ src: `${dirLegs}/legs_basic.png`, layer: 2 }],
-	[{ src: `${dirCommon}/empty`, layer: 2 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 2 }],
 	[{ src: `${dirLegs}/legs_Aki boots.png`, layer: 2 }],
 	[{ src: `${dirLegs}/legs_broccoli - sakamot o.png`, layer: 2 }],
 	[{ src: `${dirLegs}/legs_chicken.png`, layer: 2 }],
