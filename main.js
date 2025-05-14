@@ -35,18 +35,19 @@ If we need to change the layer of a part:
 /*
 NEW ARRANGE
 ------------
+----FRONT---
 10 	Hands (front) 
 	 Normal hands, should be able to cover any other item
 9 	Eyes
 	 Covering the visor
 8	Tie (front)
 	 Normal tie
-7	Visor
-	 Visor, glasses
-6 	Tie (back)
-	 maybe a scarf with wind partially behind the body
-5	Head (front)
+7	Head (front)
 	 Hats, hair...
+6	Visor
+	 Visor, glasses
+5 	Tie (back)
+	 maybe a scarf with wind partially behind the body
 4 	Body
 	 Normal body
 3 	Head (back)
@@ -58,6 +59,7 @@ NEW ARRANGE
 0 	Legs (back)
 	 Maybe when running, it would be the farthest item
 
+----BACK----
 */
 
 const webWidth = 600;
@@ -151,27 +153,27 @@ const hands = [
 // b = 3
 const head = [
 	[{ src: `${dirHead}/head_basic.png`, layer: 3 }],
-	[{ src: `${dirCommon}/empty.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_cat ears.png`, layer: 5 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_cat ears.png`, layer: 7 }],
 	[{ src: `${dirHead}/head_choco horns_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_diamond helmet.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_diamond helmet.png`, layer: 7 }],
 	[{ src: `${dirHead}/head_ebifrion mane_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_flowery - Sofea Osmera.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_fubuki ears.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_headphone.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_flowery - Sofea Osmera.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_fubuki ears.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_headphone.png`, layer: 7 }],
 	[{ src: `${dirHead}/head_indian headdress_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_kapumin bow.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_pain.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_pata_rough.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_peko ears.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_kapumin bow.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_pain.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_pata_rough.png`, layer: 3 }],
+	[{ src: `${dirHead}/head_peko ears.png`, layer: 7 }],
 	[{ src: `${dirHead}/head_pineapple_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_rose.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_rosenbhat.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_straw hat.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_tanukileaf.png`, layer: 5 }],
-	[{ src: `${dirHead}/head_worm.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_rose.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_rosenbhat.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_straw hat.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_tanukileaf.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_worm.png`, layer: 7 }],
 ];
 
 const legs = [
@@ -187,43 +189,43 @@ const legs = [
 	[{ src: `${dirLegs}/legs_tree trunk.png`, layer: 2 }],
 ];
 
-// b = 6
+// b = 5
 const tie = [
 	[{ src: `${dirTie}/tie_basic.png`, layer: 8 }],
 	[{ src: `${dirCommon}/empty.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_beard black.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_beard blonde.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_beard white.png`, layer: 8 }],
-	[{ src: `${dirTie}/tie_gamer coat_b.png`, layer: 6 }],
+	[{ src: `${dirTie}/tie_gamer coat_b.png`, layer: 5 }],
 	[{ src: `${dirTie}/tie_jobzu.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_moustache black.png`, layer: 8 }],
-	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 6 }],
-	[{ src: `${dirTie}/tie_moustache white.png`, layer: 6 }],
+	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 5 }],
+	[{ src: `${dirTie}/tie_moustache white.png`, layer: 5 }],
 	[{ src: `${dirTie}/tie_mustache_oshu.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_neopolice F_b.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_neopolice M_b.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_peanut.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_pinkribbon - Sofea Osmera.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_straight.png`, layer: 8 }],
-	[{ src: `${dirTie}/tie_UFO_b.png`, layer: 6 }],
+	[{ src: `${dirTie}/tie_UFO_b.png`, layer: 5 }],
 ];
 
 const visor = [
-	[{ src: `${dirVisor}/visor_basic.png`, layer: 7 }],
-	[{ src: `${dirCommon}/empty.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_biker.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_crusader.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_crusader2.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_cyclops.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_feathery - Sofea Osmera.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_kamina.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_noh mask.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_panda_Ticket.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_paper.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_round.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_round2.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_sunglasses.png`, layer: 7 }],
-	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_basic.png`, layer: 6 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_biker.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_crusader.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_crusader2.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_cyclops.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_feathery - Sofea Osmera.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_kamina.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_noh mask.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_panda_Ticket.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_paper.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_round.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_round2.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_sunglasses.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 6 }],
 ];
 
 
@@ -235,9 +237,9 @@ const currentRosetai = [
 	legs[0][0],		// 2
 	null,			// 3
 	body[0][0],		// 4
-	head[0][0],		// 5
-	null,			// 6
-	visor[0][0],	// 7
+	null,			// 5
+	visor[0][0],	// 6
+	head[0][0],		// 7
 	tie[0][0],		// 8
 	eyes[0][0],		// 9
 	hands[0][0]		// 10
@@ -434,15 +436,15 @@ function getLayersByType(type) {
 		case "body":
 			return [4];
 		case "visor":
-			return [7];
+			return [6];
 		case "eyes":
 			return [9];
 		case "tie":
-			return [6, 8];
+			return [5, 8];
 		case "hands":
 			return [1, 10];
 		case "head":
-			return [3, 5];
+			return [3, 7];
 		default:
 			return [];
 	}
