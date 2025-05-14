@@ -36,24 +36,26 @@ If we need to change the layer of a part:
 NEW ARRANGE
 ------------
 ----FRONT---
-10 	Hands (front) 
+11 	Hands (front) 
 	 Normal hands, should be able to cover any other item
-9 	Eyes
+10 	Eyes
 	 Covering the visor
+9	Head (front)
+	 Hats, hair...
 8	Tie (front)
 	 Normal tie
-7	Head (front)
-	 Hats, hair...
-6	Visor
+7	Visor
 	 Visor, glasses
-5 	Tie (back)
+6 	Tie (back)
 	 maybe a scarf with wind partially behind the body
+5	Head 2 (front)
+	 Hats, hair...
 4 	Body
 	 Normal body
-3 	Head (back)
-	 long hair, etc
-2 	Legs (front)
+3 	Legs (front)
 	 Normal legs
+2 	Head (back)
+	 long hair, etc
 1 	Hands (back)
 	 Arms crossed on the back or something
 0 	Legs (back)
@@ -111,121 +113,121 @@ const body = [
 
 
 const eyes = [
-	[{ src: `${dirEyes}/eyes_basic.png`, layer: 9 }],
-	[{ src: `${dirCommon}/empty.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_3rd eye.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_angry.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_closed.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_creeper.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_dead.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_haaton.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_halfeye - Sofea Osmera.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_horus.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_jealous penguin.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_jobzu.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_monocle.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_oh no.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_pumpkin.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_real.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_round.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_swirly glasses.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_weird.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_white.png`, layer: 9 }],
-	[{ src: `${dirEyes}/eyes_XD.png`, layer: 9 }],
+	[{ src: `${dirEyes}/eyes_basic.png`, layer: 10 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_3rd eye.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_angry.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_closed.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_creeper.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_dead.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_haaton.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_halfeye - Sofea Osmera.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_horus.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_jealous penguin.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_jobzu.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_monocle.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_oh no.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_pumpkin.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_real.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_round.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_swirly glasses.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_weird.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_white.png`, layer: 10 }],
+	[{ src: `${dirEyes}/eyes_XD.png`, layer: 10 }],
 ];
 
 const hands = [
-	[{ src: `${dirHands}/hands_basic.png`, layer: 10 }],
-	[{ src: `${dirCommon}/empty.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_beer.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_broccoli - sakamot o.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_buff.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_club.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_cornpopper.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_jobzu.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_mic.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_penlights.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_pickaxe.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_simple whiteglove - Sofea Osmera.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_SnS.png`, layer: 10 }],
-	[{ src: `${dirHands}/hands_splatoongun.png`, layer: 10 }],
+	[{ src: `${dirHands}/hands_basic.png`, layer: 11 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_beer.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_broccoli - sakamot o.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_buff.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_club.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_cornpopper.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_jobzu.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_mic.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_penlights.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_pickaxe.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_simple whiteglove - Sofea Osmera.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_SnS.png`, layer: 11 }],
+	[{ src: `${dirHands}/hands_splatoongun.png`, layer: 11 }],
 ];
-// b = 3
+// b = 2
 const head = [
-	[{ src: `${dirHead}/head_basic.png`, layer: 3 }],
-	[{ src: `${dirCommon}/empty.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_cat ears.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_choco horns_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_diamond helmet.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_ebifrion mane_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_flowery - Sofea Osmera.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_fubuki ears.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_headphone.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_indian headdress_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_kapumin bow.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_pain.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_pata_rough.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_peko ears.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_pineapple_b.png`, layer: 3 }],
-	[{ src: `${dirHead}/head_rose.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_rosenbhat.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_straw hat.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_tanukileaf.png`, layer: 7 }],
-	[{ src: `${dirHead}/head_worm.png`, layer: 7 }],
+	[{ src: `${dirHead}/head_basic.png`, layer: 2 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_asacocoplug.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_broccoli - sakamot o.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_cat ears.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_choco horns_b.png`, layer: 2 }],
+	[{ src: `${dirHead}/head_diamond helmet.png`, layer: 9 }],
+	[{ src: `${dirHead}/head_ebifrion mane_b.png`, layer: 2 }],
+	[{ src: `${dirHead}/head_flowery - Sofea Osmera.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_fubuki ears.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_headphone.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_indian headdress_b.png`, layer: 2 }],
+	[{ src: `${dirHead}/head_kapumin bow.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_pain.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_pata_rough.png`, layer: 2 }],
+	[{ src: `${dirHead}/head_peko ears.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_pineapple_b.png`, layer: 2 }],
+	[{ src: `${dirHead}/head_rose.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_rosenbhat.png`, layer: 5 }],
+	[{ src: `${dirHead}/head_straw hat.png`, layer: 9 }],
+	[{ src: `${dirHead}/head_tanukileaf.png`, layer: 9 }],
+	[{ src: `${dirHead}/head_worm.png`, layer: 5 }],
 ];
 
 const legs = [
-	[{ src: `${dirLegs}/legs_basic.png`, layer: 2 }],
-	[{ src: `${dirCommon}/empty.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_Aki boots.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_broccoli - sakamot o.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_chicken.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_closer - Sofea Osmera.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_human.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_sports shoes.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_tako.png`, layer: 2 }],
-	[{ src: `${dirLegs}/legs_tree trunk.png`, layer: 2 }],
+	[{ src: `${dirLegs}/legs_basic.png`, layer: 3 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_Aki boots.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_broccoli - sakamot o.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_chicken.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_closer - Sofea Osmera.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_human.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_sports shoes.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_tako.png`, layer: 3 }],
+	[{ src: `${dirLegs}/legs_tree trunk.png`, layer: 3 }],
 ];
 
-// b = 5
+// b = 6
 const tie = [
 	[{ src: `${dirTie}/tie_basic.png`, layer: 8 }],
 	[{ src: `${dirCommon}/empty.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_beard black.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_beard blonde.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_beard white.png`, layer: 8 }],
-	[{ src: `${dirTie}/tie_gamer coat_b.png`, layer: 5 }],
+	[{ src: `${dirTie}/tie_gamer coat_b.png`, layer: 6 }],
 	[{ src: `${dirTie}/tie_jobzu.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_moustache black.png`, layer: 8 }],
-	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 5 }],
-	[{ src: `${dirTie}/tie_moustache white.png`, layer: 5 }],
+	[{ src: `${dirTie}/tie_moustache blonde.png`, layer: 6 }],
+	[{ src: `${dirTie}/tie_moustache white.png`, layer: 6 }],
 	[{ src: `${dirTie}/tie_mustache_oshu.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_neopolice F_b.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_neopolice M_b.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_peanut.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_pinkribbon - Sofea Osmera.png`, layer: 8 }],
 	[{ src: `${dirTie}/tie_straight.png`, layer: 8 }],
-	[{ src: `${dirTie}/tie_UFO_b.png`, layer: 5 }],
+	[{ src: `${dirTie}/tie_UFO_b.png`, layer: 6 }],
 ];
 
 const visor = [
-	[{ src: `${dirVisor}/visor_basic.png`, layer: 6 }],
-	[{ src: `${dirCommon}/empty.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_biker.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_crusader.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_crusader2.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_cyclops.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_feathery - Sofea Osmera.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_kamina.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_noh mask.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_panda_Ticket.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_paper.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_round.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_round2.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_sunglasses.png`, layer: 6 }],
-	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 6 }],
+	[{ src: `${dirVisor}/visor_basic.png`, layer: 7 }],
+	[{ src: `${dirCommon}/empty.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_biker.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_crusader.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_crusader2.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_cyclops.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_feathery - Sofea Osmera.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_kamina.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_noh mask.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_panda_Ticket.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_paper.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_round.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_round2.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_sunglasses.png`, layer: 7 }],
+	[{ src: `${dirVisor}/visor_tanuki2 edit - Tanuki Senpai.png`, layer: 7 }],
 ];
 
 
@@ -234,15 +236,16 @@ const currentRosetai = [
 	// Back
 	null, 			// 0
 	null,			// 1
-	legs[0][0],		// 2
-	null,			// 3
+	head[0][0],		// 2
+	legs[0][0],		// 3
 	body[0][0],		// 4
 	null,			// 5
-	visor[0][0],	// 6
-	head[0][0],		// 7
+	null,			// 6
+	visor[0][0],	// 7
 	tie[0][0],		// 8
-	eyes[0][0],		// 9
-	hands[0][0]		// 10
+	null,			// 9
+	eyes[0][0],		// 10
+	hands[0][0]		// 11
 	// Front
 ];
 
@@ -432,19 +435,19 @@ function getAssetArray(type) {
 function getLayersByType(type) {
 	switch (type) {
 		case "legs":
-			return [0, 2];
+			return [0, 3];
 		case "body":
 			return [4];
 		case "visor":
-			return [6];
+			return [7];
 		case "eyes":
-			return [9];
+			return [10];
 		case "tie":
-			return [5, 8];
+			return [6, 8];
 		case "hands":
-			return [1, 10];
+			return [1, 11];
 		case "head":
-			return [3, 7];
+			return [2, 5, 9];
 		default:
 			return [];
 	}
